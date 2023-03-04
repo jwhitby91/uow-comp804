@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Programming Exercise - Jason Whitby</title>
+        
+        <style>
+            /* TODO 
+                Task 3
+                    Summarise health benefit so not copy instead reference 
+                Task 5 - github 
+                    New repo
+                    push changes 
+                    add doc link to html
+
+            */
+
+            /* Task 1: 
+                        you must use at least 5 different kinds of CSS properties. 
+                        Each property in the style tag is account for 4 marks. 
+            */
+            #task1 {
+                background-color: #0230ff10;
+                text-align: left;
+                border-style: dotted;
+                border-color: blue;
+                border-width: 1px;
+                padding-left: 20px;
+                color: darkblue;
+            }
+
+            /* Task 2: 
+                    you must use at least 5 different kinds of CSS properties. 
+                    Each property in the style tag is account for 4 marks.
+                    
+                    
+            */
+
+            #sessionTable {
+                padding: 20px;
+                /* Change font style/type */
+                font-family: Arial, Helvetica, sans-serif;
+                border-style: solid;
+                border-collapse: collapse;
+                border-color: black;
+                border-width: 2px;
+            }
+
+            /* Change hyperlink colour to suit colour scheme */
+            #sessionTable a:link {
+                color:coral;
+            }
+            
+            #sessionTable a:visited {
+                color:chocolate;
+            }
+
+            /* Change text style, colour & apperance so it sticks out more */
+            #headerRow {
+                font-size: 15px;
+                color: greenyellow;
+                background-color: rgb(48, 48, 48);
+                text-align: left;
+                padding: 50px;
+                border-bottom: solid 1px white;
+                font-style: oblique;
+            }
+
+            #headerRow th {
+                padding: 10px;
+            }
+
+            /* For activity (first) column have solid white border on right so table looks formated nicer. */
+            .activity {
+                border-right: solid 1px white;
+            }
+            .activityColumn {
+                border-right: solid 1px white;
+            }
+
+            /* change background colour of the rows from black & grey. Change font color to white */
+            .oddRow {
+                background-color: rgb(77, 77, 77);
+                color: gainsboro;
+            }
+
+            .oddRow td {
+                padding: 5px;
+            }
+
+            .evenRow {
+                background-color: black;
+                color: gainsboro;
+            }
+
+            .evenRow td {
+                padding: 5px;
+            }
+
+            /* Task 3: 
+                    you must use at least 5 different kinds of CSS properties. 
+                    Each property in the style tag is account for 4 marks. 
+            */
+
+            #t3_table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                max-width: 800px;
+                background-color: #fff;
+                /* Add curved border at top left & right of table for neater apperance */
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                overflow: hidden;
+            }
+
+            #t3_headerRow {
+                font-size: 20px;
+                color: greenyellow;
+                background-color: rgb(48, 48, 48);
+                text-align: center;
+                padding: 50px;
+                border-bottom: solid 1px white;
+                font-style: oblique;
+            }
+
+            #t3_headerRow th {
+                padding: 15px;
+            }
+
+            .t3_name {
+                border-right: solid 1px white;
+            }
+
+            /* Align text all in the center and set max width to leave more room for health benefit column */
+            .t3_nameColumn {
+                border-right: solid 1px white;
+                text-align: center;
+                max-width: 300px;
+            }
+
+            /* Align text all in the center and set max width to larger than name column to allow for more text */
+            .t3_healthBenefitColumn {
+                border-right: solid 4px white;
+                text-align: center;
+                max-width: 500px;
+            }
+        
+            /* change hyperlink colour of text to make more visible for colour scheme of table */
+            .t3_healthBenefitColumn a:link {
+                color:deepskyblue;
+            }
+
+            .t3_healthBenefitColumn a:visited {
+                color: darkcyan;
+            }
+
+            .t3_oddRow {
+                background-color: rgb(77, 77, 77);
+                color: gainsboro;
+            }
+
+            .t3_oddRow td {
+                padding: 5px;
+            }
+
+            .t3_evenRow {
+                background-color: black;
+                color: gainsboro;
+            }
+
+            .t3_evenRow td {
+                padding: 5px;
+            }
+
+            /* set height & max width of images to they the same size */
+            .t3_tableImg {
+                height: 20%;
+                max-width: 20%;
+            }
+
+            /* Task 4: 
+                Set animal image size to be the same for Task
+            */
+            .t4_animalImage {
+                height: 20%;
+                max-width: 20%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Task 1  Use CSS to display infomration -->
+        <h1>Task 1:</h1>
+        <div id="task1">
+            <h1>4134230 Jason Whitby</h1>
+            <h2>COMP804: Web Security</h2>
+            <h3>Assignment 1, due at the end of Week 5</h3>
+        </div>
+
+        <!-- Task 2 CSS Table -->
+        <br /><br />
+
+        <h1>Task 2:</h1>
+        
+        <!-- Table based off Autumn Session 2023 from https://www.uow.edu.au/student/dates/ -->
+        <table id="sessionTable">
+            <tr id="headerRow">
+                <th class="activity">
+                    <p>Activity</p>
+                </th>
+                <th class="date">
+                    <p>Date</p>
+                </th>
+            </tr>
+
+            <!-- Following rows change from oddRow to evenRow to allow CSS to be applied to different colour schemes -->
+            <tr class="oddRow">
+                <!-- activityColumn & dateColumn are used for row columns so can apply css to different columns -->
+                <td class="activityColumn">
+                    <p>First day to enrol for re-enrolling (continuing studnets)</p>
+                </td>
+                <td class="dateColumn">
+                    <p>21 Nov 2022</p>
+                </td>
+            </tr>
+            
+            <tr class="evenRow">
+                <td class="activityColumn">
+                    <p>First day to enrol for new students (commencing students)</p>
+                </td>
+                <td class="dateColumn">
+                    <p>05 Dec 2022</p>
+                </td>
+            </tr>
+
+            <tr class="oddRow">
+                <td class="activityColumn">
+                    <p>Orientation</p>
+                </td>
+                <td class="dateColumn">
+                    <p>20 Feb - 23 Feb 2023</p>
+                    <!-- Hyperlink coloured is changed by css. Target _blank will open the link as a new page instead of changing current page -->
+                    <p>Further information is available on <a href="https://www.uow.edu.au/student/get-started/orientation/" target="_blank">Get Started</a></p>
+                </td>
+            </tr>
+
+            <tr class="evenRow">
+                <td class="activityColumn">
+                    <p>Lectures Commence (weeks 1-6)</p>
+                </td>
+                <td class="dateColumn">
+                    <p>27 Feb - 07 Apr 2023</p>
+                </td>
+            </tr>
+
+            <tr class="oddRow">
+                <td class="activityColumn">
+                    <p>Last day to enrol / add subjects yourself</p>
+                </td>
+                <td class="dateColumn">
+                    <p>10 Mar 2023</p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Task 3 CSS Table -->
+        <br /><br />
+
+        <h1>Task 3:</h1>
+        
+        <div>
+            <table id="t3_table">
+                <tr id="t3_headerRow">
+                    <th class="t3_name">
+                        <p>Name</p>
+                    </th>
+                    <th class="t3_healthBenefit">
+                        <p>Health Benefit</p>
+                    </th>
+                </tr>
+
+                <!-- Following rows change from oddRow to evenRow to allow CSS to be applied to different colour schemes -->
+                <tr class="t3_oddRow">
+                    <!-- t3_nameColumn & t3_healthBenefitColumn are used for row columns so can apply css to different columns -->
+                    <td class="t3_nameColumn">
+                        <p>Broccoli</p>
+                        <!-- 
+                            Image size is set by CSS to ensure images are the same size which is why class is set
+                            Image title also includes the reference to the image
+                        -->
+                        <!-- Broccoli https://www.pim4u.com/broccoli (Accessed 23rd February 2023) -->
+                        <img src="img/t3_broccoli.png" title="broccoli reference: https://www.pim4u.com/broccoli" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>There is promising evidence that a compound in broccoli (glurcoraphanin) may be useful in fighting progression of cancer.</p>
+                        <!-- Hyperlink colour is changed by css & target set to _blank so opens as new page instead of changing current page -->
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/34638282/" target="_blank">pubmed.ncbi.nlm.nih.gov</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_evenRow">
+                    <td class="t3_nameColumn">
+                        <p>Carrots</p>
+                        <!-- Carrot https://toppng.com/free-image/carrot-image-png-carrots-transparent-background-PNG-free-PNG-Images_202681 (Accessed 23rd February 2023) -->
+                        <img src="img/t3_carrot.png" title="Carrots ref: https://toppng.com/free-image/carrot-image-png-carrots-transparent-background-PNG-free-PNG-Images_202681" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Carrots contain a large amount of nutrients such as Potassium Vitamin A & K.</p>
+                        <a href="https://fdc.nal.usda.gov/fdc-app.html#/food-details/170393/nutrients" target="_blank">fdc.nal.usda.gov</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_oddRow">
+                    <td class="t3_nameColumn">
+                        <p>Spinach</p>
+                        <!-- Spinach https://minlatonfoodland.com.au/lines/spinach-per-bunch (Accessed 23rd February 2023) -->
+                        <img src="img/t3_spinach.png" title="Spinach ref: https://minlatonfoodland.com.au/lines/spinach-per-bunch" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>There has been links that spinach may help in a reduction of blood pressure</p>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525132/" target="_blank">ncbi.nlm.nih.gov</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_evenRow">
+                    <td class="t3_nameColumn">
+                        <p>Garlic</p>
+                        <!-- Garlic https://shop.marketorganics.com.au/lines/fresh-produce-per-kg-org-garlic-per-kg-1g (Accessed 23rd February 2023) -->
+                        <img src="img/t3_garlic.png" title="Garlic ref: https://shop.marketorganics.com.au/lines/fresh-produce-per-kg-org-garlic-per-kg-1g" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>A study has found garlic may help in insulin resistance </p>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/33974725/" target="_blank">pubmed.ncbi.nlm.nih.gov</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_oddRow">
+                    <td class="t3_nameColumn">
+                        <p>Brussels sprouts</p>
+                        <!-- Brussel sprouts https://www.dole.com/en/produce/organics/organic-brussels-sprouts (Accessed 23rd February 2023) -->
+                        <img src="img/t3_brussels_sprouts.png" title="Brussels sprouts ref: https://www.dole.com/en/produce/organics/organic-brussels-sprouts" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Some benefits to Brussel sprouts include helping with high blood pressure & cholesterol.</p>
+                        <a href="https://www.webmd.com/food-recipes/health-benefits-brussels-sprouts#:~:text=Eating%20a%20lot%20of%20Brussels,%2C%20heart%20disease%2C%20and%20diabetes." target="_blank">webmd.com</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_evenRow">
+                    <td class="t3_nameColumn">
+                        <p>Kale</p>
+                        <!-- Kale https://kidsgardening.org/resources/growing-guide-kale/ (Accessed 23rd February 2023) -->
+                        <img src="img/t3_kale.png" title="Kale ref: https://kidsgardening.org/resources/growing-guide-kale/" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Researchers found that in a study with mice Kale helped with your digestive health</p>
+                        <a href="https://foodrevolution.org/blog/kale-health-benefits/" target="_blank">foodrevolution.org</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_oddRow">
+                    <td class="t3_nameColumn">
+                        <p>Green Peas</p>
+                        <!-- Green Peas https://exoticvegetablespune.com/product/green-peas-frozen/ (Accessed 23rd February 2023) -->
+                        <img src="img/t3_green_peas.png" title="Green Peas ref: https://exoticvegetablespune.com/product/green-peas-frozen/" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Green peas are a good source of plant-based protein</p>
+                        <a href="https://www.bbcgoodfood.com/howto/guide/health-benefits-peas" target="_blank">bbcgoodfood.com</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_evenRow">
+                    <td class="t3_nameColumn">
+                        <p>Beets</p>
+                        <!-- Beets https://exoticvegetablespune.com/product/green-peas-frozen/ (Accessed 23rd February 2023) -->
+                        <img src="img/t3_beets.png" title="Beets ref: https://learn.freshcap.com/tips/beetroot-powder-benefits/" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Beets are high in fiber & have anti-inflammatory properties</p>
+                        <a href="https://health.clevelandclinic.org/the-health-benefits-of-beets/" target="_blank">health.clevelandclinic.com</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_oddRow">
+                    <td class="t3_nameColumn">
+                        <p>Asparagus</p>
+                        <!-- Asparagus https://www.butcherbakergrocer.com.au/products/asparagus (Accessed 23rd February 2023) -->
+                        <img src="img/t3_asparagus.png" title="Asparagus ref: https://www.butcherbakergrocer.com.au/products/asparagus" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Asparagus is packed with antioxidants and may help lower blood pressure.</p>
+                        <a href="https://www.eatingwell.com/article/17129/5-powerful-health-benefits-of-asparagus-you-probably-didnt-know/" target="_blank">eatingwell.com</a>
+                    </td>
+                </tr>
+
+                <tr class="t3_evenRow">
+                    <td class="t3_nameColumn">
+                        <p>Sweet potatoes</p>
+                        <!-- Sweet potatoes https://www.harvestplus.org/crop/vitamin-a-sweet-potato/ (Accessed 23rd February 2023) -->
+                        <img src="img/t3_sweet_potatoes.png" title="Sweet potatoes ref: https://www.harvestplus.org/crop/vitamin-a-sweet-potato/" class="t3_tableImg">
+                    </td>
+                    <td class="t3_healthBenefitColumn">
+                        <p>Sweet potatoes may help support immune function & digestive health.</p>
+                        <a href="https://www.bbcgoodfood.com/howto/guide/health-benefits-sweet-potato" target="_blank">bbcgoodfood.com</a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- Task 4 Javascript with button -->
+        <br /><br />
+
+        <h1>Task 4:</h1>
+
+        <div>
+            <!-- Buttons for user to click. onclick points to javacsript function to run -->
+            <button id="cat-button" onclick="catButtonClick()">cat</button>
+            <button id="dog-button" onclick="dogButtonClick()">dog</button>
+            <button id="parrot-button" onclick="parrotButtonClick()">parrot</button>
+
+            <br /><br>
+            <!-- Input box which is set to readonly to avoid users changing text -->
+            <input type="text" id="selected-input-text" readonly>
+            <br />
+            <!-- Add p tag with no text to change later with javascript. Used this for spacing -->
+            <p id="selected-animal-text"></p>
+            <!-- Add a blank image container to change with javavscript on button press -->
+            <img id="selected-animal-image" src="" title="Image of selected animal" style="display: none;" class="t4_animalImage">
+        </div>
+
+        <!-- Script tags can be put above here but placed here for easier marking -->
+        <script>
+            // Variables for used commonly with functions. Declared here to avoid extra lines of code 
+            var selectedInputText = document.getElementById('selected-input-text');
+            var selectedAnimalText = document.getElementById('selected-animal-text')
+            var selectedAnimalImg = document.getElementById('selected-animal-image');
+
+            function catButtonClick()
+            {
+                // Set text of input box & text field 
+                selectedInputText.value = 'User clicked cat button';
+                selectedAnimalText.textContent = 'Cat button has been clicked'
+
+                // Set source image, assign title so users can rollover to see reference & image name. Change display from none to block so it is visible on page
+                selectedAnimalImg.src = 'img/t4_cat.jpg';
+                // Cat image https://vetschoice.guildinsurance.com.au/cats/cat-insurance (Accessed 23rd February 2023) 
+                selectedAnimalImg.title = 'Cat image ref: https://vetschoice.guildinsurance.com.au/cats/cat-insurance'
+                selectedAnimalImg.style.display = 'block';
+            }
+
+            function dogButtonClick()
+            {
+                // Set text of input box & text field 
+                selectedInputText.value = 'User clicked dog button';
+                selectedAnimalText.textContent = 'Dog button has been clicked'
+
+                // Set source image, assign title so users can rollover to see reference & image name. Change display from none to block so it is visible on page
+                selectedAnimalImg.src = 'img/t4_dog.jpg';
+                // Dog image https://adelaidevet.com.au/pet-library/bernese-mountain-dog (Accessed 23rd February 2023) 
+                selectedAnimalImg.title = 'Dog image ref: https://adelaidevet.com.au/pet-library/bernese-mountain-dog'
+                selectedAnimalImg.style.display = 'block';
+
+            }
+
+            function parrotButtonClick()
+            {
+                // Set text of input box & text field 
+                selectedInputText.value = 'User clicked Parrot button';
+                selectedAnimalText.textContent = 'Parrot button has been clicked'
+
+                // Set source image, assign title so users can rollover to see reference & image name. Change display from none to block so it is visible on page
+                selectedAnimalImg.src = 'img/t4_parrot.png';
+                // Parrot image https://www.parrots.org/lp/macaw-parrot-resources/ (Accessed 23rd February 2023) 
+                selectedAnimalImg.title = 'Parrot image ref: https://www.parrots.org/lp/macaw-parrot-resources/'
+                selectedAnimalImg.style.display = 'block';
+            }
+
+        </script>
+
+        <!-- Task 5 github -->
+        <br /><br />
+
+        <h1>Task 5:</h1>
+
+    </body>
+
+</html>
